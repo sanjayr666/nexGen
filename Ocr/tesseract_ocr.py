@@ -3,6 +3,6 @@ import pytesseract as pt
 import cv2
 
 im  = Image.open("sample.png")
-text = pt.image_to_string(im_gray,lang='eng')
+text = pt.image_to_string(im,lang='eng')
 
 print(text)
