@@ -64,8 +64,11 @@ def draw():
 
         hsvFrame = cv2.cvtColor(filterFrame, cv2.COLOR_BGR2HSV)
 
-        lower_bound = np.array([30, 100, 100])
-        upper_bound = np.array([80, 255, 255])
+        #lower_bound = np.array([30, 100, 100])
+        #upper_bound = np.array([80, 255, 255])
+
+        lower_bound = green_range[0]
+        upper_bound = green_range[1]
 
         threshImg = cv2.inRange(hsvFrame, lower_bound, upper_bound)
 
@@ -360,10 +363,3 @@ while (1):
         break
 
 cv2.destroyAllWindows()
-
-
-
-
-
-
-
